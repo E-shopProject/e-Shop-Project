@@ -35,7 +35,7 @@ class ProductRetriever
 
             $this->products = $proTypeList;
         } else {
-            echo "110 results";
+            echo "0 results";
         }
     }
 

@@ -45,15 +45,19 @@ $typeList = $proRetr->getProducts();
         </ul>
     </nav>
 </section>
+<div class="sidenav">
+    <a href="#CPU">CPU</a>
+    <a href="#GPU">GPU</a>
+    <a href="#RAM">RAM</a>
+</div>
 
 <div id="main" style="height: auto">
     <p id="productHeader">
         OurProducts
     </p>
-
     <?php
     foreach ($typeList as $type) {
-        echo '<p class="productTitle">' . $type->getName(). '</p>';
+        echo '<p id="'. $type->getName() .'" class="productTitle">' . $type->getName(). '</p>';
         foreach ($type->getProductList() as $product) {
             echo '<div class="product">';
             echo '<img class="productImage" src="' . $product->getImage() . '" >';
